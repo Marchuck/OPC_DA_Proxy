@@ -1,20 +1,30 @@
-﻿using OPC_DA_Proxy.Models;
-using System;
+﻿using Opc.Da;
+using OPC_DA_Proxy.Models;
+using OPC_DA_Proxy.OpcDaClient;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
+using ItemValueResult = Opc.Da.ItemValueResult;
 
 namespace OPC_DA_Proxy.Controllers
 {
     public class OpcDaController : ApiController
     {
         // GET: api/OpcDa
-        public IEnumerable<Opc.Da.ItemValueResult> Get()
+        public IEnumerable<ItemValueResult> Get()
         {
-            Opc.Da.ItemValueResult []results = Workspace.getInstance().GetWorkspace();
+            ItemValueResult[] results = Workspace.getInstance().GetWorkspace();
             return results;
+        }
+
+        public BrowseElement[] Get(string id)
+        {
+            id = id.Replace("$", ".");
+            return OpcDaConnector.repository[id];
+        }
+         
+        public string[] GetDirectories(bool directories )
+        {
+            return Workspace.getInstance().directories();
         }
     }
 }

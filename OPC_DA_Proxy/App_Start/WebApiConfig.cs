@@ -1,7 +1,5 @@
 ﻿using OPC_DA_Proxy.OpcDaClient;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Net.Http.Headers;
 using System.Web.Http;
 
 namespace OPC_DA_Proxy
@@ -14,15 +12,14 @@ namespace OPC_DA_Proxy
             OpcDaRunner.getInstance().Connect();
             // Web API routes
             config.MapHttpAttributeRoutes();
-
             
-             config.Routes.MapHttpRoute(
-                name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
-            );
-             
-
+            config.Routes.MapHttpRoute(
+               name: "DefaultApi",
+               routeTemplate: "api/{controller}/{id}",
+               defaults: new { id = RouteParameter.Optional }
+           );
+            config.Formatters.Remove(config.Formatters.XmlFormatter);
+            
         }
     }
 }

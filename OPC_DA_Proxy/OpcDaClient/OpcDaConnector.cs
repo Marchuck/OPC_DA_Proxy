@@ -1,10 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Opc.Da;
 using OPC_DA_Proxy.Models;
+using Server = Opc.Da.Server;
+using NetworkCredential = System.Net.NetworkCredential;
+using Factory = OpcCom.Factory;
+using Subscription = Opc.Da.Subscription;
+using Opc.Dx;
+using System.Collections.Generic;
 
 namespace OPC_DA_Proxy.OpcDaClient
 {
@@ -13,38 +15,75 @@ namespace OPC_DA_Proxy.OpcDaClient
         #region fields
 
         private String opcServerEndpoint;
-        private BrowsableGroup[] browsableGroups;
-        private Opc.Da.Server server = null;
+        public static Server server = null;
         
         #endregion
 
-        public OpcDaConnector(String opcServerEndpoint, BrowsableGroup[] browsableGroups)
+        public OpcDaConnector(String opcServerEndpoint)
         {
             this.opcServerEndpoint = opcServerEndpoint;
-            this.browsableGroups = browsableGroups;
         }
-       
+
         public Boolean Connect()
         {
-            
-            // Create a server object and connect to the TwinCATOpcServer
+            // Create a server object and connects to 
             Opc.URL url = new Opc.URL(opcServerEndpoint);
             
-            OpcCom.Factory fact = new OpcCom.Factory();
-            server = new Opc.Da.Server(fact, null);
-            server.Connect(url, new Opc.ConnectData(new System.Net.NetworkCredential()));
+            Factory fact = new Factory();
+            server = new Server(fact, null);
+            server.Connect(url, new Opc.ConnectData(new NetworkCredential()));
+            
+            string root = getRootName(server);
+
+            recursiveTreeFill(server, root);
 
             // Create a group
-            Opc.Da.Subscription group;
+            Subscription group;
 
+            //AI, DI ...
+            BrowseElement[] directories = repository[root];
+
+            foreach (BrowseElement dir in directories) {
+                string directoryName = dir.Name;
+
+                SubscriptionState groupState = new SubscriptionState();
+                groupState.Name = directoryName;
+
+                groupState.Active = true;
+                group = (Subscription)server.CreateSubscription(groupState);
+
+                List<Item> itemsPerDirectory = new List<Item>();
+
+                //FIX.AI.BLACK, FIX.AI.RED, FIX.DI.GREEN ...
+                BrowseElement[] dirContent = repository[dir.ItemName];
+
+                foreach (BrowseElement dirNode in dirContent) {
+                    
+                    //FIX.BLACK>F_CV <-this is real signal!
+
+                    BrowseElement[] signals = repository[dirNode.ItemName];
+                    foreach(BrowseElement signal in signals) {
+                        //disable this nodes, because they are noisy
+                        if (!signal.ItemName.Contains("A_OPCTIME"))
+                        {
+                            itemsPerDirectory.Add(new Item() { ItemName = signal.ItemName });
+                        }
+                    }
+                }
+                Item[] items = itemsPerDirectory.ToArray();
+                items = group.AddItems(items);
+                EnableDataChangedCallback(group);
+            }
+            
+            /*
             foreach (BrowsableGroup BrowsableGroup in browsableGroups)
             {
-                Opc.Da.SubscriptionState groupState = new SubscriptionState();
+                SubscriptionState groupState = new SubscriptionState();
                 groupState.Name = BrowsableGroup.GroupName;
 
                 groupState.Active = true;
-                group = (Opc.Da.Subscription)server.CreateSubscription(groupState);
-                Opc.Da.Item[] items = BrowsableGroup.produceItemsFromNodes();
+                group = (Subscription)server.CreateSubscription(groupState);
+                Item[] items = BrowsableGroup.produceItemsFromNodes();
 
                 items = group.AddItems(items);
                 EnableDataChangedCallback(group);
@@ -52,58 +91,100 @@ namespace OPC_DA_Proxy.OpcDaClient
                 //EnableDataReadCallback(group);
                 //todo:
                 //EnableDataWriteCallback(group, BrowsableGroup.produceValueToWrite(items[0],34.0) );
-            }
-
-
+            }*/
             return false;
         }
-        public Boolean Disconnect()
+
+        private Item[] produceItemsFromNodes(string directory, BrowseElement[] Nodes)
         {
+            Item[] items = new Item[Nodes.Length];
 
-            return false;
+            for (int j = 0; j < Nodes.Length; j++)
+            {
+                items[j] = new Item();
+                items[j].ItemName = Nodes[j].ItemName;
+            }
+            return items;
         }
+
+        private string getRootName(Server server)
+        {
+            BrowsePosition position;
+            BrowseFilters filters = new BrowseFilters() { BrowseFilter = browseFilter.all };
+
+            BrowseElement[] rootElements = server.Browse(new ItemIdentifier(), filters, out position);
+            return rootElements[0].ItemName;
+        }
+        
+        public static Dictionary<string, BrowseElement[]> repository { get; set; } = new Dictionary<string, BrowseElement[]>();
+
+        private void recursiveTreeFill(Server server, string itemId)
+        {
+            BrowsePosition position;
+            BrowseFilters filters = new BrowseFilters() { BrowseFilter = browseFilter.all };
+
+            ItemIdentifier item = (itemId == null) ? new ItemIdentifier() : new ItemIdentifier(itemId);
+
+            BrowseElement[] browseElements = server.Browse(item, filters, out position);
+
+            repository.Add(itemId, browseElements);
+
+            for (int index = 0; index < browseElements.Length; index++)
+            {
+                    BrowseElement browsedElement = browseElements[index];
+                    string itemName = browsedElement.ItemName;
+                if (browsedElement.HasChildren)
+                {
+                    recursiveTreeFill(server, itemName);
+                }
+                else
+                {
+                    if (!repository.ContainsKey(itemId))
+                    {
+                        repository.Add(itemId, new BrowseElement[] { });
+                    }
+                }
+            }
+        }
+        
+
+        private string[] crateNodeNames(BrowseElement[] browseElements)
+        {
+            int len = browseElements.Length;
+            string[] nodeNames = new string[len];
+            for(int j = 0; j < len; j++)
+            {
+                nodeNames[j] = browseElements[j].ItemName;
+            }
+            return nodeNames;
+        }
+
+       
         private void EnableDataReadCallback(Subscription group)
         {
             Opc.IRequest req;
-            group.Read(group.Items, 44.0, new Opc.Da.ReadCompleteEventHandler(ReadCompleteCallback), out req);
+            group.Read(group.Items, 44.0, new ReadCompleteEventHandler(ReadCompleteCallback), out req);
             Console.WriteLine();
             group.State.Active = true;
         }
-        private void EnableDataWriteCallback(Subscription group, Opc.Da.ItemValue[] writeValues)
+        private void EnableDataWriteCallback(Subscription group, ItemValue[] writeValues)
         {
             Opc.IRequest req;
-            group.Write(writeValues, 44.0, new Opc.Da.WriteCompleteEventHandler(WriteCompleteCallback), out req);
+            group.Write(writeValues, 44.0, new WriteCompleteEventHandler(WriteCompleteCallback), out req);
             group.State.Active = true;
             Console.WriteLine();
         }
         private void EnableDataChangedCallback(Subscription group)
         {
-            Opc.Da.DataChangedEventHandler handler = new Opc.Da.DataChangedEventHandler( DataChangedCallback);
+            DataChangedEventHandler handler = new DataChangedEventHandler( DataChangedCallback);
             
-            group.DataChanged += new Opc.Da.DataChangedEventHandler(DataChangedCallback);
+            group.DataChanged += new DataChangedEventHandler(DataChangedCallback);
             group.State.Active = true;
         }
 
-        void DataChangedCallback(object subscriptionHandle, object requestHandle, Opc.Da.ItemValueResult[] results)
+        void DataChangedCallback(object subscriptionHandle, object requestHandle, ItemValueResult[] results)
         {
-
             Workspace.getInstance().UpdateWorkspace(results);
-
-            //Console.WriteLine("Data Changed in group "+(clientHandle as Subscription)?.Name);
-            foreach (Opc.Da.ItemValueResult updateResult in results)
-            {
-                /**
-                Console.WriteLine("\t{0}\tval:{1}", updateResult.ItemName, updateResult.Value);
-                Console.WriteLine("TimeStamp: {0:00}:{1:00}:{2:00}:{3:000}",
-                    updateResult.Timestamp.Hour,
-                    updateResult.Timestamp.Minute,
-                    updateResult.Timestamp.Second,
-                    updateResult.Timestamp.Millisecond);
-                */
-                //                Workspace.getInstance().UpdateNode("AI", updateResult.ItemName, updateResult.Value);
-                //                Workspace.getInstance().UpdateNode("AI", "FIX.WYSOKOSC.F_CV", -11);
-            }
-            //Console.WriteLine();
         }
 
         void WriteCompleteCallback(object clientHandle, Opc.IdentifiedResult[] results)
@@ -116,17 +197,14 @@ namespace OPC_DA_Proxy.OpcDaClient
             Console.WriteLine();
         }
 
-        void ReadCompleteCallback(object clientHandle, Opc.Da.ItemValueResult[] results)
+        void ReadCompleteCallback(object clientHandle, ItemValueResult[] results)
         {
             Console.WriteLine("Read completed");
-            foreach (Opc.Da.ItemValueResult readResult in results)
+            foreach (ItemValueResult readResult in results)
             {
                 Console.WriteLine("\t{0}\tval:{1}", readResult.ItemName, readResult.Value);
             }
             Console.WriteLine();
         }
-
-        
-
     }
 }

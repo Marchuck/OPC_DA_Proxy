@@ -123,6 +123,7 @@
     <Content Include="App_Data\OpcRcw.Da.dll" />
     <Content Include="App_Data\OpcRcw.Dx.dll" />
     <Content Include="App_Data\OpcRcw.Hda.dll" />
+    <Content Include="App_Start\index.html" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -133,7 +134,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Workspace.cs" />
-    <Compile Include="OpcDaClient\BrowsableGroup.cs" />
     <Compile Include="OpcDaClient\OpcDaRunner.cs" />
     <Compile Include="OpcDaClient\OpcDaConnector.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
