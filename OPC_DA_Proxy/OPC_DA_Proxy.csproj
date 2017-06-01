@@ -125,6 +125,8 @@
     <Content Include="App_Data\OpcRcw.Hda.dll" />
     <Content Include="App_Start\index.html" />
     <Content Include="Global.asax" />
+    <Content Include="pictures\kolko.svg" />
+    <Content Include="pictures\zbiorniki.svg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -133,6 +135,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Image.cs" />
+    <Compile Include="Models\Data.cs" />
     <Compile Include="Models\Workspace.cs" />
     <Compile Include="OpcDaClient\OpcDaRunner.cs" />
     <Compile Include="OpcDaClient\OpcDaConnector.cs" />

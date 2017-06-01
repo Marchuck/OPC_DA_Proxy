@@ -32,6 +32,10 @@ namespace OPC_DA_Proxy.Models
             results = NewResults;
         }
 
+        public string[] pictures()
+        {
+            return new[]{"zbiorniki", "" };
+        }
         public string[] directories()
         {
             string[] _nodes = new string[nodes.Keys.Count];

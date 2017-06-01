@@ -9,9 +9,16 @@ namespace OPC_DA_Proxy.Controllers
 {
     public class OpcDaController : ApiController
     {
+        public string GetWriteValueResponse(string nodeId, string directory, double value)
+        {
+            string fixedNodeId = nodeId.Replace("$", ".");
+            return OpcDaConnector.WriteValue(fixedNodeId, directory, value);
+        }
+
         // GET: api/OpcDa
         public IEnumerable<ItemValueResult> Get()
         {
+            
             ItemValueResult[] results = Workspace.getInstance().GetWorkspace();
             return results;
         }
@@ -26,5 +33,17 @@ namespace OPC_DA_Proxy.Controllers
         {
             return Workspace.getInstance().directories();
         }
+
+        public string[] GetAvailablePictures(bool pictures)
+        {
+            //return Workspace.getInstance().pictures();
+            return Data.availablePicturesImpl2();
+        }
+
+        public Image GetPicture(string pictureId)
+        {
+            return new Image(pictureId, Data.forId(pictureId));
+        }
+
     }
 }

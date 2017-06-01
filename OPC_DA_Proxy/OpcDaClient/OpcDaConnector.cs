@@ -6,7 +6,10 @@ using NetworkCredential = System.Net.NetworkCredential;
 using Factory = OpcCom.Factory;
 using Subscription = Opc.Da.Subscription;
 using Opc.Dx;
+using System.Threading;
+
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace OPC_DA_Proxy.OpcDaClient
 {
@@ -64,7 +67,8 @@ namespace OPC_DA_Proxy.OpcDaClient
                     BrowseElement[] signals = repository[dirNode.ItemName];
                     foreach(BrowseElement signal in signals) {
                         //disable this nodes, because they are noisy
-                        if (!signal.ItemName.Contains("A_OPCTIME"))
+                        string itemName = signal.ItemName;
+                        if (!itemName.Contains("A_OPCTIME")&& !itemName.Contains("A_SCAN"))
                         {
                             itemsPerDirectory.Add(new Item() { ItemName = signal.ItemName });
                         }
@@ -118,6 +122,38 @@ namespace OPC_DA_Proxy.OpcDaClient
         
         public static Dictionary<string, BrowseElement[]> repository { get; set; } = new Dictionary<string, BrowseElement[]>();
 
+        public static string WriteValue(string nodeName, string directoryName, double value)
+        {
+            /*Opc.IRequest req;
+            ItemValue it = new ItemValue(new Opc.ItemIdentifier(nodeName));
+            it.Value = value;
+
+            SubscriptionState groupState = new SubscriptionState();
+            groupState.Name = directoryName;
+
+            groupState.Active = true;
+            Subscription group = (Subscription)server.CreateSubscription(groupState);
+            group.Write( new ItemValue[] { it }, 44.0, new WriteCompleteEventHandler(WriteCompleteCallbackImpl), out req);
+            group.State.Active = true;
+            */
+
+
+            ItemValueResult it = new ItemValueResult(new Opc.ItemIdentifier(nodeName));
+            it.Value = value;
+            
+            server.Write(new ItemValueResult[] { it });
+
+            Thread thread = new Thread(() =>
+                        {
+              Thread.CurrentThread.IsBackground = true;
+            });
+
+            thread.Start();
+            thread.Name = "Masz ty RiGCz? wpisałeś  " +value+" do węzła "+ nodeName;
+            return thread.Name;
+            //return nodeName + " : " + value; 
+        }
+
         private void recursiveTreeFill(Server server, string itemId)
         {
             BrowsePosition position;
@@ -158,8 +194,7 @@ namespace OPC_DA_Proxy.OpcDaClient
             }
             return nodeNames;
         }
-
-       
+        
         private void EnableDataReadCallback(Subscription group)
         {
             Opc.IRequest req;
@@ -186,6 +221,8 @@ namespace OPC_DA_Proxy.OpcDaClient
         {
             Workspace.getInstance().UpdateWorkspace(results);
         }
+        static void WriteCompleteCallbackImpl(object clientHandle, Opc.IdentifiedResult[] results) { }
+
 
         void WriteCompleteCallback(object clientHandle, Opc.IdentifiedResult[] results)
         {
