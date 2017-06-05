@@ -9,16 +9,22 @@ namespace OPC_DA_Proxy.Controllers
 {
     public class OpcDaController : ApiController
     {
-        public string GetWriteValueResponse(string nodeId, string directory, double value)
+        public ItemValueResult[] GetWriteValueResponse(string writeNodeId, double value)
         {
-            string fixedNodeId = nodeId.Replace("$", ".");
-            return OpcDaConnector.WriteValue(fixedNodeId, directory, value);
+            string fixedNodeId = writeNodeId.Replace("$", ".");
+            OpcDaConnector.WriteValue(fixedNodeId, value);
+            return GetReadValueResponse(writeNodeId);
+        }
+
+        public ItemValueResult[] GetReadValueResponse(string readNodeId)
+        {
+            string fixedNodeId = readNodeId.Replace("$", ".");
+            return OpcDaConnector.ReadValue(fixedNodeId);
         }
 
         // GET: api/OpcDa
         public IEnumerable<ItemValueResult> Get()
         {
-            
             ItemValueResult[] results = Workspace.getInstance().GetWorkspace();
             return results;
         }

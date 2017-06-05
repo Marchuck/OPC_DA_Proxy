@@ -40,13 +40,21 @@ namespace OPC_DA_Proxy.OpcDaClient
 
             recursiveTreeFill(server, root);
 
+            subscribeToNodes(root);
+            
+            return false;
+        }
+
+        private void subscribeToNodes(string root)
+        {
             // Create a group
             Subscription group;
 
             //AI, DI ...
             BrowseElement[] directories = repository[root];
 
-            foreach (BrowseElement dir in directories) {
+            foreach (BrowseElement dir in directories)
+            {
                 string directoryName = dir.Name;
 
                 SubscriptionState groupState = new SubscriptionState();
@@ -60,15 +68,17 @@ namespace OPC_DA_Proxy.OpcDaClient
                 //FIX.AI.BLACK, FIX.AI.RED, FIX.DI.GREEN ...
                 BrowseElement[] dirContent = repository[dir.ItemName];
 
-                foreach (BrowseElement dirNode in dirContent) {
-                    
+                foreach (BrowseElement dirNode in dirContent)
+                {
+
                     //FIX.BLACK>F_CV <-this is real signal!
 
                     BrowseElement[] signals = repository[dirNode.ItemName];
-                    foreach(BrowseElement signal in signals) {
+                    foreach (BrowseElement signal in signals)
+                    {
                         //disable this nodes, because they are noisy
                         string itemName = signal.ItemName;
-                        if (!itemName.Contains("A_OPCTIME")&& !itemName.Contains("A_SCAN"))
+                        if (!itemName.Contains("A_OPCTIME") && !itemName.Contains("A_SCAN"))
                         {
                             itemsPerDirectory.Add(new Item() { ItemName = signal.ItemName });
                         }
@@ -78,25 +88,6 @@ namespace OPC_DA_Proxy.OpcDaClient
                 items = group.AddItems(items);
                 EnableDataChangedCallback(group);
             }
-            
-            /*
-            foreach (BrowsableGroup BrowsableGroup in browsableGroups)
-            {
-                SubscriptionState groupState = new SubscriptionState();
-                groupState.Name = BrowsableGroup.GroupName;
-
-                groupState.Active = true;
-                group = (Subscription)server.CreateSubscription(groupState);
-                Item[] items = BrowsableGroup.produceItemsFromNodes();
-
-                items = group.AddItems(items);
-                EnableDataChangedCallback(group);
-                //todo:
-                //EnableDataReadCallback(group);
-                //todo:
-                //EnableDataWriteCallback(group, BrowsableGroup.produceValueToWrite(items[0],34.0) );
-            }*/
-            return false;
         }
 
         private Item[] produceItemsFromNodes(string directory, BrowseElement[] Nodes)
@@ -122,36 +113,26 @@ namespace OPC_DA_Proxy.OpcDaClient
         
         public static Dictionary<string, BrowseElement[]> repository { get; set; } = new Dictionary<string, BrowseElement[]>();
 
-        public static string WriteValue(string nodeName, string directoryName, double value)
+        public static string WriteValue(string nodeName, double value)
         {
-            /*Opc.IRequest req;
-            ItemValue it = new ItemValue(new Opc.ItemIdentifier(nodeName));
+
+            Opc.ItemIdentifier itemId = new Opc.ItemIdentifier(nodeName);
+            ItemValueResult it = new ItemValueResult(itemId);
             it.Value = value;
 
-            SubscriptionState groupState = new SubscriptionState();
-            groupState.Name = directoryName;
-
-            groupState.Active = true;
-            Subscription group = (Subscription)server.CreateSubscription(groupState);
-            group.Write( new ItemValue[] { it }, 44.0, new WriteCompleteEventHandler(WriteCompleteCallbackImpl), out req);
-            group.State.Active = true;
-            */
-
-
-            ItemValueResult it = new ItemValueResult(new Opc.ItemIdentifier(nodeName));
-            it.Value = value;
-            
             server.Write(new ItemValueResult[] { it });
 
-            Thread thread = new Thread(() =>
-                        {
-              Thread.CurrentThread.IsBackground = true;
-            });
+            return "Masz ty RiGCz? wpisałeś  " + value + " do węzła " + nodeName;
 
-            thread.Start();
-            thread.Name = "Masz ty RiGCz? wpisałeś  " +value+" do węzła "+ nodeName;
-            return thread.Name;
-            //return nodeName + " : " + value; 
+        }
+        public static ItemValueResult[] ReadValue(string nodeName)
+        {
+
+            Opc.ItemIdentifier itemId = new Opc.ItemIdentifier(nodeName);
+            Item it = new Item(itemId);
+            ItemValueResult[] results = server.Read(new Item[] { it });
+
+            return results;
         }
 
         private void recursiveTreeFill(Server server, string itemId)
