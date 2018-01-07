@@ -1,0 +1,839 @@
+﻿<?xml version="1.0" encoding="UTF-16"?>
+<!-- Wygenerowano przez Kreator eksportowania rysunków iFIX w wersji 5.8.10383.0 na Monday, June 5, 2017 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:gef="urn:schemas-gefanuc:gefschemas.xsd" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.2" width="86" height="67" New_Width="511" New_Height="378" background-fill="#ffffff" gef:runtimeVisible="true" gef:alwaysOnTop="true" gef:titlebar="true" gef:systemMenu="true" gef:resizable="false" gef:gridEnabled="false" gef:gridInterval="15" gef:snapToGrid="false" gef:gradientEnabled="false" gef:gradientAngle="0.000000" gef:fadeColor="#ffffff" gef:fadeType="0" gef:blend="50" gef:cacheEnabled="true" gef:displayLayer="-1" gef:languageDesired="1045" gef:translateOnOpen="true" gef:DisableAutoScale="true" gef:GlobalTimeSync="true" gef:RecalculateViewport="false" gef:EnhancedCoordinates="true">
+	<desc>OEM State Commands</desc>
+	<title>OEM_STATECOMMANDS.GRF</title>
+	<gef:author>GE</gef:author>
+	<gef:comment>OEM State Commands</gef:comment>
+	<gef:version gef:major="1" gef:minor="1" gef:revision="0"/>
+	<defs>
+		<linearGradient id="FillStyleGradient_grpNlsStrings" x1="0%" x2="100%" spreadMethod="pad">
+			<stop offset="0%" stop-color="#00008e"/>
+			<stop offset="100%" stop-color="#ffffff"/>
+		</linearGradient>
+		<linearGradient id="FillStyleGradient_txtStartConfirmation" x1="0%" x2="100%" spreadMethod="pad">
+			<stop offset="0%" stop-color="#ffffff"/>
+			<stop offset="100%" stop-color="#ffffff"/>
+		</linearGradient>
+		<linearGradient id="FillStyleGradient_txtStopConfirmation" x1="0%" x2="100%" spreadMethod="pad">
+			<stop offset="0%" stop-color="#ffffff"/>
+			<stop offset="100%" stop-color="#ffffff"/>
+		</linearGradient>
+		<linearGradient id="FillStyleGradient_txtMsgTitle" x1="0%" x2="100%" spreadMethod="pad">
+			<stop offset="0%" stop-color="#ffffff"/>
+			<stop offset="100%" stop-color="#ffffff"/>
+		</linearGradient>
+		<linearGradient id="FillStyleGradient_txtResetConfirmation" x1="0%" x2="100%" spreadMethod="pad">
+			<stop offset="0%" stop-color="#ffffff"/>
+			<stop offset="100%" stop-color="#ffffff"/>
+		</linearGradient>
+		<linearGradient id="FillStyleGradient_txtHoldConfirmation" x1="0%" x2="100%" spreadMethod="pad">
+			<stop offset="0%" stop-color="#ffffff"/>
+			<stop offset="100%" stop-color="#ffffff"/>
+		</linearGradient>
+		<linearGradient id="FillStyleGradient_txtUnholdConfirmation" x1="0%" x2="100%" spreadMethod="pad">
+			<stop offset="0%" stop-color="#ffffff"/>
+			<stop offset="100%" stop-color="#ffffff"/>
+		</linearGradient>
+		<linearGradient id="FillStyleGradient_txtSuspendConfirmation" x1="0%" x2="100%" spreadMethod="pad">
+			<stop offset="0%" stop-color="#ffffff"/>
+			<stop offset="100%" stop-color="#ffffff"/>
+		</linearGradient>
+		<linearGradient id="FillStyleGradient_txtUnsuspendConfirmation" x1="0%" x2="100%" spreadMethod="pad">
+			<stop offset="0%" stop-color="#ffffff"/>
+			<stop offset="100%" stop-color="#ffffff"/>
+		</linearGradient>
+		<linearGradient id="FillStyleGradient_txtAbortConfirmation" x1="0%" x2="100%" spreadMethod="pad">
+			<stop offset="0%" stop-color="#ffffff"/>
+			<stop offset="100%" stop-color="#ffffff"/>
+		</linearGradient>
+		<linearGradient id="FillStyleGradient_txtClearConfirmation" x1="0%" x2="100%" spreadMethod="pad">
+			<stop offset="0%" stop-color="#ffffff"/>
+			<stop offset="100%" stop-color="#ffffff"/>
+		</linearGradient>
+	</defs>
+	<g stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd">
+		<g id="grpFrame" x="0" y="0" width="508" height="374" fill="#f0f0f0" stroke="#000000" stroke-width="1" background-fill="#ffffff" transform="rotate(0.000000deg,254,187)" gef:verticalScaleDirection="bottomToTop">
+			<tooltipOption>TooltipDescription</tooltipOption>
+			<rect id="RectOuterFrame" x="0" y="0" width="508" height="374" fill="#f0f0f0" stroke="#000000" stroke-width="1" background-fill="#ffffff" transform="rotate(0.000000deg,254,187)" gef:verticalScaleDirection="bottomToTop">
+				<tooltipOption>TooltipDescription</tooltipOption>
+			</rect>
+			<rect id="RectInnerFrame" x="3" y="3" width="502" height="368" fill="#f0f0f0" stroke="#000000" stroke-width="1" background-fill="#ffffff" transform="rotate(0.000000deg,254,187)" gef:verticalScaleDirection="bottomToTop">
+				<tooltipOption>TooltipDescription</tooltipOption>
+			</rect>
+			<rect id="RectDividerHoriz" x="3" y="184" width="502" height="3" fill="#f0f0f0" stroke="#000000" stroke-width="1" background-fill="#ffffff" transform="rotate(0.000000deg,254,185)" gef:verticalScaleDirection="bottomToTop">
+				<tooltipOption>TooltipDescription</tooltipOption>
+			</rect>
+			<rect id="RectDividerVertLeft" x="166" y="3" width="3" height="181" fill="#f0f0f0" stroke="#000000" stroke-width="1" background-fill="#ffffff" transform="rotate(0.000000deg,168,94)" gef:verticalScaleDirection="bottomToTop">
+				<tooltipOption>TooltipDescription</tooltipOption>
+			</rect>
+			<rect id="RectDividerVertRight" x="334" y="3" width="3" height="181" fill="#f0f0f0" stroke="#000000" stroke-width="1" background-fill="#ffffff" transform="rotate(0.000000deg,336,93)" gef:verticalScaleDirection="bottomToTop">
+				<tooltipOption>TooltipDescription</tooltipOption>
+			</rect>
+			<rect id="RectDividerHoriz1" x="3" y="280" width="502" height="3" fill="#f0f0f0" stroke="#000000" stroke-width="1" background-fill="#ffffff" transform="rotate(0.000000deg,254,282)" gef:verticalScaleDirection="bottomToTop">
+				<tooltipOption>TooltipDescription</tooltipOption>
+			</rect>
+		</g>
+		<g id="StateCommandButtons" x="18" y="15" width="471" height="254" fill="#643408" stroke="#000000" stroke-width="0" background-fill="#ffffff" transform="rotate(0.000000deg,253,141)" gef:verticalScaleDirection="bottomToTop">
+			<tooltipOption>TooltipDescription</tooltipOption>
+			<g id="grpButtonReset" x="352" y="199" width="136" height="69" fill="#643408" stroke="#000000" stroke-width="0" background-fill="#ffffff" transform="rotate(0.000000deg,420,233)" gef:verticalScaleDirection="bottomToTop">
+				<tooltipOption>TooltipDescription</tooltipOption>
+				<image id="PanelBtnReset" x="352" y="199" width="135" height="68" xlink:href="OEM_StateCommands/OEM_StateCommands_PanelBtnReset_0.png" gef:verticalScaleDirection="bottomToTop" gef:uniformScale="true">
+					<tooltipOption>TooltipDescription</tooltipOption>
+				</image>
+				<text id="ButtonLabelReset" x="419" y="240" textLength="51" lengthAdjust="spacingAndGlyphs" fill="#643408" stroke="none" stroke-width="0" background-fill="#ffffff" font-family="Arial" font-size="19" text-anchor="middle" gef:verticalScaleDirection="bottomToTop" gef:transparent="true">Reset
+					<tooltipOption>TooltipDescription</tooltipOption>
+				</text>
+				<rect id="rctMaskReset" x="352" y="199" width="134" height="67" visibility="hidden" fill="none" stroke="none" stroke-width="1" background-fill="#ffffff" transform="rotate(0.000000deg,420,233)" gef:verticalScaleDirection="bottomToTop" gef:transparent="true">
+					<tooltipOption>TooltipDescription</tooltipOption>
+				</rect>
+			</g>
+			<g id="grpButtonStop" x="185" y="199" width="136" height="69" fill="#ffffff" stroke="#000000" stroke-width="0" background-fill="#ffffff" transform="rotate(0.000000deg,252,233)" gef:verticalScaleDirection="bottomToTop">
+				<tooltipOption>TooltipDescription</tooltipOption>
+				<image id="PanelBtnStop" x="185" y="199" width="135" height="68" xlink:href="OEM_StateCommands/OEM_StateCommands_PanelBtnStop_0.png" gef:verticalScaleDirection="bottomToTop" gef:uniformScale="true">
+					<tooltipOption>TooltipDescription</tooltipOption>
+				</image>
+				<text id="ButtonLabelStop" x="252" y="240" textLength="40" lengthAdjust="spacingAndGlyphs" fill="#ffffff" stroke="none" stroke-width="0" background-fill="#ffffff" font-family="Arial" font-size="19" text-anchor="middle" gef:verticalScaleDirection="bottomToTop" gef:transparent="true">Stop
+					<tooltipOption>TooltipDescription</tooltipOption>
+				</text>
+				<rect id="rctMaskStop" x="185" y="199" width="134" height="67" visibility="hidden" fill="none" stroke="none" stroke-width="1" background-fill="#ffffff" transform="rotate(0.000000deg,252,233)" gef:verticalScaleDirection="bottomToTop" gef:transparent="true">
+					<tooltipOption>TooltipDescription</tooltipOption>
+				</rect>
+			</g>
+			<g id="grpButtonStart" x="18" y="199" width="136" height="69" fill="#ffffff" stroke="#000000" stroke-width="0" background-fill="#ffffff" transform="rotate(0.000000deg,85,233)" gef:verticalScaleDirection="bottomToTop">
+				<tooltipOption>TooltipDescription</tooltipOption>
+				<image id="PanelBtnStart" x="18" y="199" width="135" height="68" xlink:href="OEM_StateCommands/OEM_StateCommands_PanelBtnStart_0.png" gef:verticalScaleDirection="bottomToTop" gef:uniformScale="true">
+					<tooltipOption>TooltipDescription</tooltipOption>
+				</image>
+				<text id="ButtonLabelStart" x="84" y="240" textLength="39" lengthAdjust="spacingAndGlyphs" fill="#ffffff" stroke="none" stroke-width="0" background-fill="#ffffff" font-family="Arial" font-size="19" text-anchor="middle" gef:verticalScaleDirection="bottomToTop" gef:transparent="true">Start
+					<tooltipOption>TooltipDescription</tooltipOption>
+				</text>
+				<rect id="rctMaskStart" x="18" y="199" width="134" height="67" visibility="hidden" fill="none" stroke="none" stroke-width="1" background-fill="#ffffff" transform="rotate(0.000000deg,85,233)" gef:verticalScaleDirection="bottomToTop" gef:transparent="true">
+					<tooltipOption>TooltipDescription</tooltipOption>
+				</rect>
+			</g>
+			<g id="grpButtonUnHold" x="18" y="102" width="136" height="69" fill="#643408" stroke="#000000" stroke-width="0" background-fill="#ffffff" transform="rotate(0.000000deg,86,136)" gef:verticalScaleDirection="bottomToTop">
+				<tooltipOption>TooltipDescription</tooltipOption>
+				<image id="PanelBtnUnHold" x="18" y="102" width="135" height="68" xlink:href="OEM_StateCommands/OEM_StateCommands_PanelBtnUnHold_0.png" gef:verticalScaleDirection="bottomToTop" gef:uniformScale="true">
+					<tooltipOption>TooltipDescription</tooltipOption>
+				</image>
+				<text id="ButtonLabelUnHold" x="85" y="131" textLength="108" lengthAdjust="spacingAndGlyphs" fill="#643408" stroke="none" stroke-width="0" background-fill="#ffffff" font-family="Arial" font-size="19" text-anchor="middle" gef:lines="3" gef:verticalScaleDirection="bottomToTop" gef:transparent="true">Koniec
+					<tspan x="85" y="154">Wstrzymania</tspan>
+					<tooltipOption>TooltipDescription</tooltipOption>
+				</text>
+				<rect id="rctMaskUnHold" x="18" y="102" width="134" height="67" visibility="hidden" fill="none" stroke="none" stroke-width="1" background-fill="#ffffff" transform="rotate(0.000000deg,85,136)" gef:verticalScaleDirection="bottomToTop" gef:transparent="true">
+					<tooltipOption>TooltipDescription</tooltipOption>
+				</rect>
+			</g>
+			<g id="grpButtonUnSuspend" x="185" y="102" width="136" height="69" fill="#643408" stroke="#000000" stroke-width="0" background-fill="#ffffff" transform="rotate(0.000000deg,253,136)" gef:verticalScaleDirection="bottomToTop">
+				<tooltipOption>TooltipDescription</tooltipOption>
+				<image id="PanelBtnUnSuspend" x="185" y="102" width="135" height="68" xlink:href="OEM_StateCommands/OEM_StateCommands_PanelBtnUnSuspend_0.png" gef:verticalScaleDirection="bottomToTop" gef:uniformScale="true">
+					<tooltipOption>TooltipDescription</tooltipOption>
+				</image>
+				<text id="ButtonLabelUnSuspend" x="254" y="131" textLength="104" lengthAdjust="spacingAndGlyphs" fill="#643408" stroke="none" stroke-width="0" background-fill="#ffffff" font-family="Arial" font-size="19" text-anchor="middle" gef:lines="3" gef:verticalScaleDirection="bottomToTop" gef:transparent="true">Koniec
+					<tspan x="254" y="154">Zawieszenia</tspan>
+					<tooltipOption>TooltipDescription</tooltipOption>
+				</text>
+				<rect id="rctMaskUnSuspend" x="185" y="102" width="134" height="67" visibility="hidden" fill="none" stroke="none" stroke-width="1" background-fill="#ffffff" transform="rotate(0.000000deg,252,136)" gef:verticalScaleDirection="bottomToTop" gef:transparent="true">
+					<tooltipOption>TooltipDescription</tooltipOption>
+				</rect>
+			</g>
+			<g id="grpButtonClear" x="352" y="102" width="136" height="69" fill="#643408" stroke="#000000" stroke-width="0" background-fill="#ffffff" transform="rotate(0.000000deg,420,136)" gef:verticalScaleDirection="bottomToTop">
+				<tooltipOption>TooltipDescription</tooltipOption>
+				<image id="PanelBtnClear" x="352" y="102" width="135" height="68" xlink:href="OEM_StateCommands/OEM_StateCommands_PanelBtnClear_0.png" gef:verticalScaleDirection="bottomToTop" gef:uniformScale="true">
+					<tooltipOption>TooltipDescription</tooltipOption>
+				</image>
+				<text id="ButtonLabelClear" x="420" y="143" textLength="106" lengthAdjust="spacingAndGlyphs" fill="#643408" stroke="none" stroke-width="0" background-fill="#ffffff" font-family="Arial" font-size="19" text-anchor="middle" gef:verticalScaleDirection="bottomToTop" gef:transparent="true">Czyszczenie
+					<tooltipOption>TooltipDescription</tooltipOption>
+				</text>
+				<rect id="rctMaskClear" x="352" y="102" width="134" height="67" visibility="hidden" fill="none" stroke="none" stroke-width="1" background-fill="#ffffff" transform="rotate(0.000000deg,420,136)" gef:verticalScaleDirection="bottomToTop" gef:transparent="true">
+					<tooltipOption>TooltipDescription</tooltipOption>
+				</rect>
+			</g>
+			<g id="grpButtonHold" x="18" y="15" width="136" height="69" fill="#643408" stroke="#000000" stroke-width="0" background-fill="#ffffff" transform="rotate(0.000000deg,86,49)" gef:verticalScaleDirection="bottomToTop">
+				<tooltipOption>TooltipDescription</tooltipOption>
+				<image id="PanelBtnHold" x="18" y="15" width="135" height="68" xlink:href="OEM_StateCommands/OEM_StateCommands_PanelBtnHold_0.png" gef:verticalScaleDirection="bottomToTop" gef:uniformScale="true">
+					<tooltipOption>TooltipDescription</tooltipOption>
+				</image>
+				<text id="ButtonLabelHold" x="84" y="56" textLength="109" lengthAdjust="spacingAndGlyphs" fill="#643408" stroke="none" stroke-width="0" background-fill="#ffffff" font-family="Arial" font-size="19" text-anchor="middle" gef:verticalScaleDirection="bottomToTop" gef:transparent="true">Wstrzymanie
+					<tooltipOption>TooltipDescription</tooltipOption>
+				</text>
+				<rect id="rctMaskHold" x="18" y="15" width="134" height="67" visibility="hidden" fill="none" stroke="none" stroke-width="1" background-fill="#ffffff" transform="rotate(0.000000deg,85,49)" gef:verticalScaleDirection="bottomToTop" gef:transparent="true">
+					<tooltipOption>TooltipDescription</tooltipOption>
+				</rect>
+			</g>
+			<g id="grpButtonSuspend" x="185" y="15" width="136" height="69" fill="#643408" stroke="#000000" stroke-width="0" background-fill="#ffffff" transform="rotate(0.000000deg,253,49)" gef:verticalScaleDirection="bottomToTop">
+				<tooltipOption>TooltipDescription</tooltipOption>
+				<image id="PanelBtnSuspend" x="185" y="15" width="135" height="68" xlink:href="OEM_StateCommands/OEM_StateCommands_PanelBtnSuspend_0.png" gef:verticalScaleDirection="bottomToTop" gef:uniformScale="true">
+					<tooltipOption>TooltipDescription</tooltipOption>
+				</image>
+				<text id="ButtonLabelSuspend" x="253" y="56" textLength="105" lengthAdjust="spacingAndGlyphs" fill="#643408" stroke="none" stroke-width="0" background-fill="#ffffff" font-family="Arial" font-size="19" text-anchor="middle" gef:verticalScaleDirection="bottomToTop" gef:transparent="true">Zawieszenie
+					<tooltipOption>TooltipDescription</tooltipOption>
+				</text>
+				<rect id="rctMaskSuspend" x="185" y="15" width="134" height="67" visibility="hidden" fill="none" stroke="none" stroke-width="1" background-fill="#ffffff" transform="rotate(0.000000deg,252,49)" gef:verticalScaleDirection="bottomToTop" gef:transparent="true">
+					<tooltipOption>TooltipDescription</tooltipOption>
+				</rect>
+			</g>
+			<g id="grpButtonAbort" x="352" y="15" width="136" height="69" fill="#643408" stroke="#000000" stroke-width="0" background-fill="#ffffff" transform="rotate(0.000000deg,420,49)" gef:verticalScaleDirection="bottomToTop">
+				<tooltipOption>TooltipDescription</tooltipOption>
+				<image id="PanelBtnAbort" x="352" y="15" width="135" height="68" xlink:href="OEM_StateCommands/OEM_StateCommands_PanelBtnAbort_0.png" gef:verticalScaleDirection="bottomToTop" gef:uniformScale="true">
+					<tooltipOption>TooltipDescription</tooltipOption>
+				</image>
+				<text id="ButtonLabelAbort" x="419" y="56" textLength="93" lengthAdjust="spacingAndGlyphs" fill="#643408" stroke="none" stroke-width="0" background-fill="#ffffff" font-family="Arial" font-size="19" text-anchor="middle" gef:verticalScaleDirection="bottomToTop" gef:transparent="true">Przerwanie
+					<tooltipOption>TooltipDescription</tooltipOption>
+				</text>
+				<rect id="rctMaskAbort" x="352" y="15" width="134" height="67" visibility="hidden" fill="none" stroke="none" stroke-width="1" background-fill="#ffffff" transform="rotate(0.000000deg,420,49)" gef:verticalScaleDirection="bottomToTop" gef:transparent="true">
+					<tooltipOption>TooltipDescription</tooltipOption>
+				</rect>
+			</g>
+		</g>
+		<g id="grpButtonCancel" x="185" y="294" width="136" height="69" fill="#383838" stroke="#000000" stroke-width="0" background-fill="#ffffff" transform="rotate(0.000000deg,253,328)" gef:verticalScaleDirection="bottomToTop">
+			<tooltipOption>TooltipDescription</tooltipOption>
+			<image id="PanelBtnCancel1" x="185" y="294" width="135" height="68" xlink:href="OEM_StateCommands/OEM_StateCommands_PanelBtnCancel1_0.png" gef:verticalScaleDirection="bottomToTop" gef:uniformScale="true">
+				<tooltipOption>TooltipDescription</tooltipOption>
+			</image>
+			<text id="ButtonLabelCancel1" x="252" y="335" textLength="51" lengthAdjust="spacingAndGlyphs" fill="#383838" stroke="none" stroke-width="0" background-fill="#ffffff" font-family="Arial" font-size="19" text-anchor="middle" gef:verticalScaleDirection="bottomToTop" gef:transparent="true">Anuluj
+				<tooltipOption>TooltipDescription</tooltipOption>
+			</text>
+		</g>
+		<g id="grpNlsStrings" x="43" y="340" width="1" height="2" visibility="hidden" fill="url(#FillStyleGradient_grpNlsStrings)" stroke="none" stroke-width="0" background-fill="#ffffff" transform="rotate(0.000000deg,44,341)" gef:verticalScaleDirection="bottomToTop" gef:transparent="true">
+			<tooltipOption>TooltipDescription</tooltipOption>
+			<text id="txtStartConfirmation" x="43" y="342" textLength="1" lengthAdjust="spacingAndGlyphs" visibility="hidden" fill="#00008e" stroke="none" stroke-width="0" background-fill="url(#FillStyleGradient_txtStartConfirmation)" font-family="Arial" font-size="2" gef:autoSize="false" gef:verticalScaleDirection="bottomToTop" gef:transparent="true">Czy chcesz uruchomić maszynę?
+				<tooltipOption>TooltipDescription</tooltipOption>
+			</text>
+			<text id="txtStopConfirmation" x="43" y="342" textLength="1" lengthAdjust="spacingAndGlyphs" visibility="hidden" fill="#00008e" stroke="none" stroke-width="0" background-fill="url(#FillStyleGradient_txtStopConfirmation)" font-family="Arial" font-size="2" gef:autoSize="false" gef:verticalScaleDirection="bottomToTop" gef:transparent="true">Czy chcesz zatrzymać maszynę?
+				<tooltipOption>TooltipDescription</tooltipOption>
+			</text>
+			<text id="txtMsgTitle" x="43" y="342" textLength="1" lengthAdjust="spacingAndGlyphs" visibility="hidden" fill="#00008e" stroke="none" stroke-width="0" background-fill="url(#FillStyleGradient_txtMsgTitle)" font-family="Arial" font-size="2" gef:autoSize="false" gef:verticalScaleDirection="bottomToTop" gef:transparent="true">Sterowanie maszyną
+				<tooltipOption>TooltipDescription</tooltipOption>
+			</text>
+			<text id="txtResetConfirmation" x="43" y="342" textLength="1" lengthAdjust="spacingAndGlyphs" visibility="hidden" fill="#00008e" stroke="none" stroke-width="0" background-fill="url(#FillStyleGradient_txtResetConfirmation)" font-family="Arial" font-size="2" gef:autoSize="false" gef:verticalScaleDirection="bottomToTop" gef:transparent="true">Czy chcesz zresetować maszynę?
+				<tooltipOption>TooltipDescription</tooltipOption>
+			</text>
+			<text id="txtHoldConfirmation" x="43" y="342" textLength="1" lengthAdjust="spacingAndGlyphs" visibility="hidden" fill="#00008e" stroke="none" stroke-width="0" background-fill="url(#FillStyleGradient_txtHoldConfirmation)" font-family="Arial" font-size="2" gef:autoSize="false" gef:verticalScaleDirection="bottomToTop" gef:transparent="true">Czy chcesz wstrzymać maszynę?
+				<tooltipOption>TooltipDescription</tooltipOption>
+			</text>
+			<text id="txtUnholdConfirmation" x="43" y="342" textLength="1" lengthAdjust="spacingAndGlyphs" visibility="hidden" fill="#00008e" stroke="none" stroke-width="0" background-fill="url(#FillStyleGradient_txtUnholdConfirmation)" font-family="Arial" font-size="2" gef:autoSize="false" gef:verticalScaleDirection="bottomToTop" gef:transparent="true">Czy chcesz zakończyć wstrzymanie maszyny?
+				<tooltipOption>TooltipDescription</tooltipOption>
+			</text>
+			<text id="txtSuspendConfirmation" x="43" y="342" textLength="1" lengthAdjust="spacingAndGlyphs" visibility="hidden" fill="#00008e" stroke="none" stroke-width="0" background-fill="url(#FillStyleGradient_txtSuspendConfirmation)" font-family="Arial" font-size="2" gef:autoSize="false" gef:verticalScaleDirection="bottomToTop" gef:transparent="true">Czy chcesz zawiesić pracę maszyny?
+				<tooltipOption>TooltipDescription</tooltipOption>
+			</text>
+			<text id="txtUnsuspendConfirmation" x="43" y="342" textLength="1" lengthAdjust="spacingAndGlyphs" visibility="hidden" fill="#00008e" stroke="none" stroke-width="0" background-fill="url(#FillStyleGradient_txtUnsuspendConfirmation)" font-family="Arial" font-size="2" gef:autoSize="false" gef:verticalScaleDirection="bottomToTop" gef:transparent="true">Czy chcesz zakończyć zawieszenie pracy maszyny?
+				<tooltipOption>TooltipDescription</tooltipOption>
+			</text>
+			<text id="txtAbortConfirmation" x="43" y="342" textLength="1" lengthAdjust="spacingAndGlyphs" visibility="hidden" fill="#00008e" stroke="none" stroke-width="0" background-fill="url(#FillStyleGradient_txtAbortConfirmation)" font-family="Arial" font-size="2" gef:autoSize="false" gef:verticalScaleDirection="bottomToTop" gef:transparent="true">Czy chcesz przerwać pracę maszyny?
+				<tooltipOption>TooltipDescription</tooltipOption>
+			</text>
+			<text id="txtClearConfirmation" x="43" y="342" textLength="1" lengthAdjust="spacingAndGlyphs" visibility="hidden" fill="#00008e" stroke="none" stroke-width="0" background-fill="url(#FillStyleGradient_txtClearConfirmation)" font-family="Arial" font-size="2" gef:autoSize="false" gef:verticalScaleDirection="bottomToTop" gef:transparent="true">Czy chcesz wyczyścić maszynę?
+				<tooltipOption>TooltipDescription</tooltipOption>
+			</text>
+		</g>
+	</g>
+	<foreignObject>
+		<gef:dataConnectors/>
+		<gef:symbols>
+			<gef:symbol id="@gef_opv1_statecur@">gef_opv1_statecur</gef:symbol>
+		</gef:symbols>
+		<gef:auxiliaryObjects>
+			<gef:graphicConnections/>
+			<gef:animations>
+				<gef:lookupAnimation id="AnimatedForegroundColor3" gef:errorMode="errorTable" gef:globalSharedTable="false" gef:globalToggle="false" gef:toggleRate="0.500000" gef:tolerance="0.000000">
+					<gef:outOfRangeValue gef:type="color">#000000</gef:outOfRangeValue>
+					<gef:level gef:exactMatch="true" gef:toggleOutput="false">
+						<gef:loMatchValue gef:type="signedInteger">0</gef:loMatchValue>
+						<gef:outputValue gef:type="color">#643408</gef:outputValue>
+					</gef:level>
+					<gef:level gef:exactMatch="true" gef:toggleOutput="false">
+						<gef:loMatchValue gef:type="signedInteger">1</gef:loMatchValue>
+						<gef:outputValue gef:type="color">#888888</gef:outputValue>
+					</gef:level>
+					<gef:animatedProperty>foregroundColor</gef:animatedProperty>
+					<gef:expression gef:tolerance="0.001">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<semantics>
+								<apply>
+									<plus/>
+									<ci>OEM_STATECOMMANDS.STATECOMMANDBUTTONS.GRPBUTTONRESET.RCTMASKRESET.VISIBLE</ci>
+								</apply>
+							</semantics>
+						</math>
+					</gef:expression>
+				</gef:lookupAnimation>
+				<gef:lookupAnimation id="AnimatedVisible4" gef:errorMode="errorTable" gef:globalSharedTable="false" gef:globalToggle="false" gef:toggleRate="0.500000" gef:tolerance="0.200000">
+					<gef:outOfRangeValue gef:type="string">true</gef:outOfRangeValue>
+					<gef:level gef:exactMatch="true" gef:toggleOutput="false">
+						<gef:loMatchValue gef:type="string">17</gef:loMatchValue>
+						<gef:outputValue gef:type="string">false</gef:outputValue>
+					</gef:level>
+					<gef:level gef:exactMatch="true" gef:toggleOutput="false">
+						<gef:loMatchValue gef:type="string">2</gef:loMatchValue>
+						<gef:outputValue gef:type="string">false</gef:outputValue>
+					</gef:level>
+					<gef:animatedProperty>visible</gef:animatedProperty>
+					<gef:expression gef:tolerance="0.001">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<semantics>
+								<apply>
+									<plus/>
+									<ci>@gef_opv1_statecur@</ci>
+								</apply>
+							</semantics>
+						</math>
+					</gef:expression>
+				</gef:lookupAnimation>
+				<gef:lookupAnimation id="AnimatedForegroundColor5" gef:errorMode="errorTable" gef:globalSharedTable="false" gef:globalToggle="false" gef:toggleRate="0.500000" gef:tolerance="0.000000">
+					<gef:outOfRangeValue gef:type="color">#000000</gef:outOfRangeValue>
+					<gef:level gef:exactMatch="true" gef:toggleOutput="false">
+						<gef:loMatchValue gef:type="signedInteger">0</gef:loMatchValue>
+						<gef:outputValue gef:type="color">#ffffff</gef:outputValue>
+					</gef:level>
+					<gef:level gef:exactMatch="true" gef:toggleOutput="false">
+						<gef:loMatchValue gef:type="signedInteger">1</gef:loMatchValue>
+						<gef:outputValue gef:type="color">#888888</gef:outputValue>
+					</gef:level>
+					<gef:animatedProperty>foregroundColor</gef:animatedProperty>
+					<gef:expression gef:tolerance="0.001">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<semantics>
+								<apply>
+									<plus/>
+									<ci>OEM_STATECOMMANDS.STATECOMMANDBUTTONS.GRPBUTTONSTOP.RCTMASKSTOP.VISIBLE</ci>
+								</apply>
+							</semantics>
+						</math>
+					</gef:expression>
+				</gef:lookupAnimation>
+				<gef:lookupAnimation id="AnimatedVisible6" gef:errorMode="errorTable" gef:globalSharedTable="false" gef:globalToggle="false" gef:toggleRate="0.500000" gef:tolerance="0.200000">
+					<gef:outOfRangeValue gef:type="string">false</gef:outOfRangeValue>
+					<gef:level gef:exactMatch="true" gef:toggleOutput="false">
+						<gef:loMatchValue gef:type="string">1</gef:loMatchValue>
+						<gef:outputValue gef:type="string">true</gef:outputValue>
+					</gef:level>
+					<gef:level gef:exactMatch="true" gef:toggleOutput="false">
+						<gef:loMatchValue gef:type="string">2</gef:loMatchValue>
+						<gef:outputValue gef:type="string">true</gef:outputValue>
+					</gef:level>
+					<gef:level gef:exactMatch="true" gef:toggleOutput="false">
+						<gef:loMatchValue gef:type="string">7</gef:loMatchValue>
+						<gef:outputValue gef:type="string">true</gef:outputValue>
+					</gef:level>
+					<gef:level gef:exactMatch="true" gef:toggleOutput="false">
+						<gef:loMatchValue gef:type="string">8</gef:loMatchValue>
+						<gef:outputValue gef:type="string">true</gef:outputValue>
+					</gef:level>
+					<gef:level gef:exactMatch="true" gef:toggleOutput="false">
+						<gef:loMatchValue gef:type="string">9</gef:loMatchValue>
+						<gef:outputValue gef:type="string">true</gef:outputValue>
+					</gef:level>
+					<gef:animatedProperty>visible</gef:animatedProperty>
+					<gef:expression gef:tolerance="0.001">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<semantics>
+								<apply>
+									<plus/>
+									<ci>@gef_opv1_statecur@</ci>
+								</apply>
+							</semantics>
+						</math>
+					</gef:expression>
+				</gef:lookupAnimation>
+				<gef:lookupAnimation id="AnimatedForegroundColor4" gef:errorMode="errorTable" gef:globalSharedTable="false" gef:globalToggle="false" gef:toggleRate="0.500000" gef:tolerance="0.000000">
+					<gef:outOfRangeValue gef:type="color">#000000</gef:outOfRangeValue>
+					<gef:level gef:exactMatch="true" gef:toggleOutput="false">
+						<gef:loMatchValue gef:type="signedInteger">0</gef:loMatchValue>
+						<gef:outputValue gef:type="color">#ffffff</gef:outputValue>
+					</gef:level>
+					<gef:level gef:exactMatch="true" gef:toggleOutput="false">
+						<gef:loMatchValue gef:type="signedInteger">1</gef:loMatchValue>
+						<gef:outputValue gef:type="color">#888888</gef:outputValue>
+					</gef:level>
+					<gef:animatedProperty>foregroundColor</gef:animatedProperty>
+					<gef:expression gef:tolerance="0.001">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<semantics>
+								<apply>
+									<plus/>
+									<ci>OEM_STATECOMMANDS.STATECOMMANDBUTTONS.GRPBUTTONSTART.RCTMASKSTART.VISIBLE</ci>
+								</apply>
+							</semantics>
+						</math>
+					</gef:expression>
+				</gef:lookupAnimation>
+				<gef:lookupAnimation id="AnimatedVisible5" gef:errorMode="errorTable" gef:globalSharedTable="false" gef:globalToggle="false" gef:toggleRate="0.500000" gef:tolerance="0.200000">
+					<gef:outOfRangeValue gef:type="string">true</gef:outOfRangeValue>
+					<gef:level gef:exactMatch="true" gef:toggleOutput="false">
+						<gef:loMatchValue gef:type="string">4</gef:loMatchValue>
+						<gef:outputValue gef:type="string">false</gef:outputValue>
+					</gef:level>
+					<gef:animatedProperty>visible</gef:animatedProperty>
+					<gef:expression gef:tolerance="0.001">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<semantics>
+								<apply>
+									<plus/>
+									<ci>@gef_opv1_statecur@</ci>
+								</apply>
+							</semantics>
+						</math>
+					</gef:expression>
+				</gef:lookupAnimation>
+				<gef:lookupAnimation id="AnimatedForegroundColor7" gef:errorMode="errorTable" gef:globalSharedTable="false" gef:globalToggle="false" gef:toggleRate="0.500000" gef:tolerance="0.000000">
+					<gef:outOfRangeValue gef:type="color">#000000</gef:outOfRangeValue>
+					<gef:level gef:exactMatch="true" gef:toggleOutput="false">
+						<gef:loMatchValue gef:type="signedInteger">0</gef:loMatchValue>
+						<gef:outputValue gef:type="color">#643408</gef:outputValue>
+					</gef:level>
+					<gef:level gef:exactMatch="true" gef:toggleOutput="false">
+						<gef:loMatchValue gef:type="signedInteger">1</gef:loMatchValue>
+						<gef:outputValue gef:type="color">#888888</gef:outputValue>
+					</gef:level>
+					<gef:animatedProperty>foregroundColor</gef:animatedProperty>
+					<gef:expression gef:tolerance="0.001">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<semantics>
+								<apply>
+									<plus/>
+									<ci>OEM_STATECOMMANDS.STATECOMMANDBUTTONS.GRPBUTTONUNHOLD.RCTMASKUNHOLD.VISIBLE</ci>
+								</apply>
+							</semantics>
+						</math>
+					</gef:expression>
+				</gef:lookupAnimation>
+				<gef:lookupAnimation id="AnimatedVisible7" gef:errorMode="errorTable" gef:globalSharedTable="false" gef:globalToggle="false" gef:toggleRate="0.500000" gef:tolerance="0.200000">
+					<gef:outOfRangeValue gef:type="string">true</gef:outOfRangeValue>
+					<gef:level gef:exactMatch="true" gef:toggleOutput="false">
+						<gef:loMatchValue gef:type="string">11</gef:loMatchValue>
+						<gef:outputValue gef:type="string">false</gef:outputValue>
+					</gef:level>
+					<gef:animatedProperty>visible</gef:animatedProperty>
+					<gef:expression gef:tolerance="0.001">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<semantics>
+								<apply>
+									<plus/>
+									<ci>@gef_opv1_statecur@</ci>
+								</apply>
+							</semantics>
+						</math>
+					</gef:expression>
+				</gef:lookupAnimation>
+				<gef:lookupAnimation id="AnimatedForegroundColor8" gef:errorMode="errorTable" gef:globalSharedTable="false" gef:globalToggle="false" gef:toggleRate="0.500000" gef:tolerance="0.000000">
+					<gef:outOfRangeValue gef:type="color">#000000</gef:outOfRangeValue>
+					<gef:level gef:exactMatch="true" gef:toggleOutput="false">
+						<gef:loMatchValue gef:type="signedInteger">0</gef:loMatchValue>
+						<gef:outputValue gef:type="color">#643408</gef:outputValue>
+					</gef:level>
+					<gef:level gef:exactMatch="true" gef:toggleOutput="false">
+						<gef:loMatchValue gef:type="signedInteger">1</gef:loMatchValue>
+						<gef:outputValue gef:type="color">#888888</gef:outputValue>
+					</gef:level>
+					<gef:animatedProperty>foregroundColor</gef:animatedProperty>
+					<gef:expression gef:tolerance="0.001">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<semantics>
+								<apply>
+									<plus/>
+									<ci>OEM_STATECOMMANDS.STATECOMMANDBUTTONS.GRPBUTTONUNSUSPEND.RCTMASKUNSUSPEND.VISIBLE</ci>
+								</apply>
+							</semantics>
+						</math>
+					</gef:expression>
+				</gef:lookupAnimation>
+				<gef:lookupAnimation id="AnimatedVisible8" gef:errorMode="errorTable" gef:globalSharedTable="false" gef:globalToggle="false" gef:toggleRate="0.500000" gef:tolerance="0.200000">
+					<gef:outOfRangeValue gef:type="string">true</gef:outOfRangeValue>
+					<gef:level gef:exactMatch="true" gef:toggleOutput="false">
+						<gef:loMatchValue gef:type="string">5</gef:loMatchValue>
+						<gef:outputValue gef:type="string">false</gef:outputValue>
+					</gef:level>
+					<gef:animatedProperty>visible</gef:animatedProperty>
+					<gef:expression gef:tolerance="0.001">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<semantics>
+								<apply>
+									<plus/>
+									<ci>@gef_opv1_statecur@</ci>
+								</apply>
+							</semantics>
+						</math>
+					</gef:expression>
+				</gef:lookupAnimation>
+				<gef:lookupAnimation id="AnimatedForegroundColor1" gef:errorMode="errorTable" gef:globalSharedTable="false" gef:globalToggle="false" gef:toggleRate="0.500000" gef:tolerance="0.000000">
+					<gef:outOfRangeValue gef:type="color">#000000</gef:outOfRangeValue>
+					<gef:level gef:exactMatch="true" gef:toggleOutput="false">
+						<gef:loMatchValue gef:type="signedInteger">0</gef:loMatchValue>
+						<gef:outputValue gef:type="color">#643408</gef:outputValue>
+					</gef:level>
+					<gef:level gef:exactMatch="true" gef:toggleOutput="false">
+						<gef:loMatchValue gef:type="signedInteger">1</gef:loMatchValue>
+						<gef:outputValue gef:type="color">#888888</gef:outputValue>
+					</gef:level>
+					<gef:animatedProperty>foregroundColor</gef:animatedProperty>
+					<gef:expression gef:tolerance="0.001">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<semantics>
+								<apply>
+									<plus/>
+									<ci>OEM_STATECOMMANDS.STATECOMMANDBUTTONS.GRPBUTTONCLEAR.RCTMASKCLEAR.VISIBLE</ci>
+								</apply>
+							</semantics>
+						</math>
+					</gef:expression>
+				</gef:lookupAnimation>
+				<gef:lookupAnimation id="AnimatedVisible1" gef:errorMode="errorTable" gef:globalSharedTable="false" gef:globalToggle="false" gef:toggleRate="0.500000" gef:tolerance="0.200000">
+					<gef:outOfRangeValue gef:type="string">true</gef:outOfRangeValue>
+					<gef:level gef:exactMatch="true" gef:toggleOutput="false">
+						<gef:loMatchValue gef:type="string">9</gef:loMatchValue>
+						<gef:outputValue gef:type="string">false</gef:outputValue>
+					</gef:level>
+					<gef:animatedProperty>visible</gef:animatedProperty>
+					<gef:expression gef:tolerance="0.001">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<semantics>
+								<apply>
+									<plus/>
+									<ci>@gef_opv1_statecur@</ci>
+								</apply>
+							</semantics>
+						</math>
+					</gef:expression>
+				</gef:lookupAnimation>
+				<gef:lookupAnimation id="AnimatedForegroundColor2" gef:errorMode="errorTable" gef:globalSharedTable="false" gef:globalToggle="false" gef:toggleRate="0.500000" gef:tolerance="0.000000">
+					<gef:outOfRangeValue gef:type="color">#000000</gef:outOfRangeValue>
+					<gef:level gef:exactMatch="true" gef:toggleOutput="false">
+						<gef:loMatchValue gef:type="signedInteger">0</gef:loMatchValue>
+						<gef:outputValue gef:type="color">#643408</gef:outputValue>
+					</gef:level>
+					<gef:level gef:exactMatch="true" gef:toggleOutput="false">
+						<gef:loMatchValue gef:type="signedInteger">1</gef:loMatchValue>
+						<gef:outputValue gef:type="color">#888888</gef:outputValue>
+					</gef:level>
+					<gef:animatedProperty>foregroundColor</gef:animatedProperty>
+					<gef:expression gef:tolerance="0.001">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<semantics>
+								<apply>
+									<plus/>
+									<ci>OEM_STATECOMMANDS.STATECOMMANDBUTTONS.GRPBUTTONHOLD.RCTMASKHOLD.VISIBLE</ci>
+								</apply>
+							</semantics>
+						</math>
+					</gef:expression>
+				</gef:lookupAnimation>
+				<gef:lookupAnimation id="AnimatedVisible2" gef:errorMode="errorTable" gef:globalSharedTable="false" gef:globalToggle="false" gef:toggleRate="0.500000" gef:tolerance="0.200000">
+					<gef:outOfRangeValue gef:type="string">true</gef:outOfRangeValue>
+					<gef:level gef:exactMatch="true" gef:toggleOutput="false">
+						<gef:loMatchValue gef:type="string">6</gef:loMatchValue>
+						<gef:outputValue gef:type="string">false</gef:outputValue>
+					</gef:level>
+					<gef:animatedProperty>visible</gef:animatedProperty>
+					<gef:expression gef:tolerance="0.001">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<semantics>
+								<apply>
+									<plus/>
+									<ci>@gef_opv1_statecur@</ci>
+								</apply>
+							</semantics>
+						</math>
+					</gef:expression>
+				</gef:lookupAnimation>
+				<gef:lookupAnimation id="AnimatedForegroundColor6" gef:errorMode="errorTable" gef:globalSharedTable="false" gef:globalToggle="false" gef:toggleRate="0.500000" gef:tolerance="0.000000">
+					<gef:outOfRangeValue gef:type="color">#000000</gef:outOfRangeValue>
+					<gef:level gef:exactMatch="true" gef:toggleOutput="false">
+						<gef:loMatchValue gef:type="signedInteger">0</gef:loMatchValue>
+						<gef:outputValue gef:type="color">#643408</gef:outputValue>
+					</gef:level>
+					<gef:level gef:exactMatch="true" gef:toggleOutput="false">
+						<gef:loMatchValue gef:type="signedInteger">1</gef:loMatchValue>
+						<gef:outputValue gef:type="color">#888888</gef:outputValue>
+					</gef:level>
+					<gef:animatedProperty>foregroundColor</gef:animatedProperty>
+					<gef:expression gef:tolerance="0.001">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<semantics>
+								<apply>
+									<plus/>
+									<ci>OEM_STATECOMMANDS.STATECOMMANDBUTTONS.GRPBUTTONSUSPEND.RCTMASKSUSPEND.VISIBLE</ci>
+								</apply>
+							</semantics>
+						</math>
+					</gef:expression>
+				</gef:lookupAnimation>
+				<gef:lookupAnimation id="AnimatedVisible3" gef:errorMode="errorTable" gef:globalSharedTable="false" gef:globalToggle="false" gef:toggleRate="0.500000" gef:tolerance="0.200000">
+					<gef:outOfRangeValue gef:type="string">true</gef:outOfRangeValue>
+					<gef:level gef:exactMatch="true" gef:toggleOutput="false">
+						<gef:loMatchValue gef:type="string">6</gef:loMatchValue>
+						<gef:outputValue gef:type="string">false</gef:outputValue>
+					</gef:level>
+					<gef:animatedProperty>visible</gef:animatedProperty>
+					<gef:expression gef:tolerance="0.001">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<semantics>
+								<apply>
+									<plus/>
+									<ci>@gef_opv1_statecur@</ci>
+								</apply>
+							</semantics>
+						</math>
+					</gef:expression>
+				</gef:lookupAnimation>
+				<gef:lookupAnimation id="AnimatedForegroundColor" gef:errorMode="errorTable" gef:globalSharedTable="false" gef:globalToggle="false" gef:toggleRate="0.500000" gef:tolerance="0.000000">
+					<gef:outOfRangeValue gef:type="color">#000000</gef:outOfRangeValue>
+					<gef:level gef:exactMatch="true" gef:toggleOutput="false">
+						<gef:loMatchValue gef:type="signedInteger">0</gef:loMatchValue>
+						<gef:outputValue gef:type="color">#643408</gef:outputValue>
+					</gef:level>
+					<gef:level gef:exactMatch="true" gef:toggleOutput="false">
+						<gef:loMatchValue gef:type="signedInteger">1</gef:loMatchValue>
+						<gef:outputValue gef:type="color">#888888</gef:outputValue>
+					</gef:level>
+					<gef:animatedProperty>foregroundColor</gef:animatedProperty>
+					<gef:expression gef:tolerance="0.001">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<semantics>
+								<apply>
+									<plus/>
+									<ci>OEM_STATECOMMANDS.STATECOMMANDBUTTONS.GRPBUTTONABORT.RCTMASKABORT.VISIBLE</ci>
+								</apply>
+							</semantics>
+						</math>
+					</gef:expression>
+				</gef:lookupAnimation>
+				<gef:lookupAnimation id="AnimatedVisible" gef:errorMode="errorTable" gef:globalSharedTable="false" gef:globalToggle="false" gef:toggleRate="0.500000" gef:tolerance="0.001000">
+					<gef:outOfRangeValue gef:type="string">false</gef:outOfRangeValue>
+					<gef:level gef:exactMatch="false" gef:toggleOutput="false">
+						<gef:loMatchValue gef:type="string">7.7</gef:loMatchValue>
+						<gef:hiMatchValue gef:type="string">9.3</gef:hiMatchValue>
+						<gef:outputValue gef:type="string">true</gef:outputValue>
+					</gef:level>
+					<gef:animatedProperty>visible</gef:animatedProperty>
+					<gef:expression gef:tolerance="0.001">
+						<math xmlns="http://www.w3.org/1998/Math/MathML">
+							<semantics>
+								<apply>
+									<plus/>
+									<ci>@gef_opv1_statecur@</ci>
+								</apply>
+							</semantics>
+						</math>
+					</gef:expression>
+				</gef:lookupAnimation>
+			</gef:animations>
+			<gef:commands/>
+		</gef:auxiliaryObjects>
+		<gef:bindings>
+			<gef:binding>
+				<gef:bindKey>ButtonLabelReset</gef:bindKey>
+				<gef:bindValue>AnimatedForegroundColor3</gef:bindValue>
+			</gef:binding>
+			<gef:binding>
+				<gef:bindKey>rctMaskReset</gef:bindKey>
+				<gef:bindValue>AnimatedVisible4</gef:bindValue>
+			</gef:binding>
+			<gef:binding>
+				<gef:bindKey>ButtonLabelStop</gef:bindKey>
+				<gef:bindValue>AnimatedForegroundColor5</gef:bindValue>
+			</gef:binding>
+			<gef:binding>
+				<gef:bindKey>rctMaskStop</gef:bindKey>
+				<gef:bindValue>AnimatedVisible6</gef:bindValue>
+			</gef:binding>
+			<gef:binding>
+				<gef:bindKey>ButtonLabelStart</gef:bindKey>
+				<gef:bindValue>AnimatedForegroundColor4</gef:bindValue>
+			</gef:binding>
+			<gef:binding>
+				<gef:bindKey>rctMaskStart</gef:bindKey>
+				<gef:bindValue>AnimatedVisible5</gef:bindValue>
+			</gef:binding>
+			<gef:binding>
+				<gef:bindKey>ButtonLabelUnHold</gef:bindKey>
+				<gef:bindValue>AnimatedForegroundColor7</gef:bindValue>
+			</gef:binding>
+			<gef:binding>
+				<gef:bindKey>rctMaskUnHold</gef:bindKey>
+				<gef:bindValue>AnimatedVisible7</gef:bindValue>
+			</gef:binding>
+			<gef:binding>
+				<gef:bindKey>ButtonLabelUnSuspend</gef:bindKey>
+				<gef:bindValue>AnimatedForegroundColor8</gef:bindValue>
+			</gef:binding>
+			<gef:binding>
+				<gef:bindKey>rctMaskUnSuspend</gef:bindKey>
+				<gef:bindValue>AnimatedVisible8</gef:bindValue>
+			</gef:binding>
+			<gef:binding>
+				<gef:bindKey>ButtonLabelClear</gef:bindKey>
+				<gef:bindValue>AnimatedForegroundColor1</gef:bindValue>
+			</gef:binding>
+			<gef:binding>
+				<gef:bindKey>rctMaskClear</gef:bindKey>
+				<gef:bindValue>AnimatedVisible1</gef:bindValue>
+			</gef:binding>
+			<gef:binding>
+				<gef:bindKey>ButtonLabelHold</gef:bindKey>
+				<gef:bindValue>AnimatedForegroundColor2</gef:bindValue>
+			</gef:binding>
+			<gef:binding>
+				<gef:bindKey>rctMaskHold</gef:bindKey>
+				<gef:bindValue>AnimatedVisible2</gef:bindValue>
+			</gef:binding>
+			<gef:binding>
+				<gef:bindKey>ButtonLabelSuspend</gef:bindKey>
+				<gef:bindValue>AnimatedForegroundColor6</gef:bindValue>
+			</gef:binding>
+			<gef:binding>
+				<gef:bindKey>rctMaskSuspend</gef:bindKey>
+				<gef:bindValue>AnimatedVisible3</gef:bindValue>
+			</gef:binding>
+			<gef:binding>
+				<gef:bindKey>ButtonLabelAbort</gef:bindKey>
+				<gef:bindValue>AnimatedForegroundColor</gef:bindValue>
+			</gef:binding>
+			<gef:binding>
+				<gef:bindKey>rctMaskAbort</gef:bindKey>
+				<gef:bindValue>AnimatedVisible</gef:bindValue>
+			</gef:binding>
+		</gef:bindings>
+	</foreignObject>
+	<gef:script id="OEM_StateCommands.cls" type="text/vbscript">
+		<gef:scriptText>VERSION 1.0 CLASS</gef:scriptText>
+		<gef:scriptText>BEGIN</gef:scriptText>
+		<gef:scriptText>  MultiUse = -1  'True</gef:scriptText>
+		<gef:scriptText>END</gef:scriptText>
+		<gef:scriptText>Attribute VB_Name = "OEM_StateCommands"</gef:scriptText>
+		<gef:scriptText>Attribute VB_GlobalNameSpace = False</gef:scriptText>
+		<gef:scriptText>Attribute VB_Creatable = False</gef:scriptText>
+		<gef:scriptText>Attribute VB_PredeclaredId = True</gef:scriptText>
+		<gef:scriptText>Attribute VB_Exposed = True</gef:scriptText>
+		<gef:scriptText>Option Explicit</gef:scriptText>
+		<gef:scriptText></gef:scriptText>
+		<gef:scriptText>Private Sub SendStateTransitionRequest(ByVal strValue As String, Optional ByVal strConfirm As String)</gef:scriptText>
+		<gef:scriptText>    If Not IsMissing(strConfirm) Then</gef:scriptText>
+		<gef:scriptText>        If MsgBox(strConfirm, vbOKCancel, txtMsgTitle.Caption) = vbCancel Then</gef:scriptText>
+		<gef:scriptText>            ' Parent.Close</gef:scriptText>
+		<gef:scriptText>            Exit Sub</gef:scriptText>
+		<gef:scriptText>        End If</gef:scriptText>
+		<gef:scriptText>    End If</gef:scriptText>
+		<gef:scriptText>    </gef:scriptText>
+		<gef:scriptText>    On Error GoTo Failed</gef:scriptText>
+		<gef:scriptText>    WriteValue strValue, "@GEF_OPv1_CNTRLCMD@", 1</gef:scriptText>
+		<gef:scriptText>    WriteValue "1", "@GEF_OPv1_CMDCHANGEREQUEST@", 1</gef:scriptText>
+		<gef:scriptText>    Parent.Close</gef:scriptText>
+		<gef:scriptText>    Exit Sub</gef:scriptText>
+		<gef:scriptText>Failed:</gef:scriptText>
+		<gef:scriptText>    HandleError</gef:scriptText>
+		<gef:scriptText>End Sub</gef:scriptText>
+		<gef:scriptText></gef:scriptText>
+		<gef:scriptText>Private Sub CFixPicture_Initialize()</gef:scriptText>
+		<gef:scriptText>    WIndowTopInPixels = (System.ScreenHeight - 20 - WindowHeightInPixels) / 2</gef:scriptText>
+		<gef:scriptText>    WindowLeftInPixels = (System.ScreenWidth - WindowWidthInPixels) / 2</gef:scriptText>
+		<gef:scriptText>End Sub</gef:scriptText>
+		<gef:scriptText></gef:scriptText>
+		<gef:scriptText>Private Sub PanelBtnAbort_Click()</gef:scriptText>
+		<gef:scriptText>    SendStateTransitionRequest "8", txtAbortConfirmation.Caption</gef:scriptText>
+		<gef:scriptText>End Sub</gef:scriptText>
+		<gef:scriptText></gef:scriptText>
+		<gef:scriptText>Private Sub PanelBtnClear_Click()</gef:scriptText>
+		<gef:scriptText>    SendStateTransitionRequest "9", txtClearConfirmation.Caption</gef:scriptText>
+		<gef:scriptText>End Sub</gef:scriptText>
+		<gef:scriptText></gef:scriptText>
+		<gef:scriptText>Private Sub PanelBtnHold_Click()</gef:scriptText>
+		<gef:scriptText>    SendStateTransitionRequest "4", txtHoldConfirmation.Caption</gef:scriptText>
+		<gef:scriptText>End Sub</gef:scriptText>
+		<gef:scriptText></gef:scriptText>
+		<gef:scriptText>Private Sub PanelBtnCancel1_Click()</gef:scriptText>
+		<gef:scriptText>    Parent.Close</gef:scriptText>
+		<gef:scriptText>End Sub</gef:scriptText>
+		<gef:scriptText></gef:scriptText>
+		<gef:scriptText>Private Sub PanelBtnReset_Click()</gef:scriptText>
+		<gef:scriptText>    SendStateTransitionRequest "1", txtResetConfirmation.Caption</gef:scriptText>
+		<gef:scriptText>End Sub</gef:scriptText>
+		<gef:scriptText></gef:scriptText>
+		<gef:scriptText>Private Sub PanelBtnStart_Click()</gef:scriptText>
+		<gef:scriptText>    SendStateTransitionRequest "2", txtStartConfirmation.Caption</gef:scriptText>
+		<gef:scriptText>End Sub</gef:scriptText>
+		<gef:scriptText></gef:scriptText>
+		<gef:scriptText>Private Sub PanelBtnStop_Click()</gef:scriptText>
+		<gef:scriptText>    SendStateTransitionRequest "3", txtStopConfirmation.Caption</gef:scriptText>
+		<gef:scriptText>End Sub</gef:scriptText>
+		<gef:scriptText></gef:scriptText>
+		<gef:scriptText>Private Sub PanelBtnSuspend_Click()</gef:scriptText>
+		<gef:scriptText>    SendStateTransitionRequest "6", txtSuspendConfirmation.Caption</gef:scriptText>
+		<gef:scriptText>End Sub</gef:scriptText>
+		<gef:scriptText></gef:scriptText>
+		<gef:scriptText>Private Sub PanelBtnUnHold_Click()</gef:scriptText>
+		<gef:scriptText>    SendStateTransitionRequest "5", txtUnholdConfirmation.Caption</gef:scriptText>
+		<gef:scriptText>End Sub</gef:scriptText>
+		<gef:scriptText></gef:scriptText>
+		<gef:scriptText>Private Sub PanelBtnUnSuspend_Click()</gef:scriptText>
+		<gef:scriptText>    SendStateTransitionRequest "7", txtUnsuspendConfirmation.Caption</gef:scriptText>
+		<gef:scriptText>End Sub</gef:scriptText>
+		<gef:scriptText></gef:scriptText>
+		<gef:scriptText>Private Sub rctMaskAbort_Click()</gef:scriptText>
+		<gef:scriptText>    ' Don't delete this empty event handler.</gef:scriptText>
+		<gef:scriptText>    ' Its presence disables the button underneath it when the mask is visible</gef:scriptText>
+		<gef:scriptText>End Sub</gef:scriptText>
+		<gef:scriptText></gef:scriptText>
+		<gef:scriptText>Private Sub rctMaskClear_Click()</gef:scriptText>
+		<gef:scriptText>    ' Don't delete this empty event handler.</gef:scriptText>
+		<gef:scriptText>    ' Its presence disables the button underneath it when the mask is visible.</gef:scriptText>
+		<gef:scriptText>End Sub</gef:scriptText>
+		<gef:scriptText></gef:scriptText>
+		<gef:scriptText>Private Sub rctMaskHold_Click()</gef:scriptText>
+		<gef:scriptText>    ' Don't delete this empty event handler.</gef:scriptText>
+		<gef:scriptText>    ' Its presence disables the button underneath it when the mask is visible.</gef:scriptText>
+		<gef:scriptText>End Sub</gef:scriptText>
+		<gef:scriptText></gef:scriptText>
+		<gef:scriptText>Private Sub rctMaskReset_Click()</gef:scriptText>
+		<gef:scriptText>    ' Don't delete this empty event handler.</gef:scriptText>
+		<gef:scriptText>    ' Its presence disables the button underneath it when the mask is visible.</gef:scriptText>
+		<gef:scriptText>End Sub</gef:scriptText>
+		<gef:scriptText></gef:scriptText>
+		<gef:scriptText>Private Sub rctMaskStart_Click()</gef:scriptText>
+		<gef:scriptText>    ' Don't delete this empty event handler.</gef:scriptText>
+		<gef:scriptText>    ' Its presence disables the button underneath it when the mask is visible.</gef:scriptText>
+		<gef:scriptText>End Sub</gef:scriptText>
+		<gef:scriptText></gef:scriptText>
+		<gef:scriptText>Private Sub rctMaskStop_Click()</gef:scriptText>
+		<gef:scriptText>    ' Don't delete this empty event handler.</gef:scriptText>
+		<gef:scriptText>    ' Its presence disables the button underneath it when the mask is visible.</gef:scriptText>
+		<gef:scriptText>End Sub</gef:scriptText>
+		<gef:scriptText></gef:scriptText>
+		<gef:scriptText>Private Sub rctMaskSuspend_Click()</gef:scriptText>
+		<gef:scriptText>    ' Don't delete this empty event handler.</gef:scriptText>
+		<gef:scriptText>    ' Its presence disables the button underneath it when the mask is visible.</gef:scriptText>
+		<gef:scriptText>End Sub</gef:scriptText>
+		<gef:scriptText></gef:scriptText>
+		<gef:scriptText>Private Sub rctMaskUnHold_Click()</gef:scriptText>
+		<gef:scriptText>    ' Don't delete this empty event handler.</gef:scriptText>
+		<gef:scriptText>    ' Its presence disables the button underneath it when the mask is visible.</gef:scriptText>
+		<gef:scriptText>End Sub</gef:scriptText>
+		<gef:scriptText></gef:scriptText>
+		<gef:scriptText>Private Sub rctMaskUnSuspend_Click()</gef:scriptText>
+		<gef:scriptText>    ' Don't delete this empty event handler.</gef:scriptText>
+		<gef:scriptText>    ' Its presence disables the button underneath it when the mask is visible.</gef:scriptText>
+		<gef:scriptText>End Sub</gef:scriptText>
+		<gef:scriptText></gef:scriptText>
+		<gef:scriptText>' The following 2 subroutines are used to align masking rectangles for</gef:scriptText>
+		<gef:scriptText>' bitmap buttons at development time.  Move cursor to AlignMask and hit F5.</gef:scriptText>
+		<gef:scriptText>'</gef:scriptText>
+		<gef:scriptText>'Private Sub AlignMaskHelper(objMask As Object, objPanel As Object)</gef:scriptText>
+		<gef:scriptText>'    With objMask</gef:scriptText>
+		<gef:scriptText>'        .HorizontalPosition = objPanel.HorizontalPosition</gef:scriptText>
+		<gef:scriptText>'        .VerticalPosition = objPanel.VerticalPosition</gef:scriptText>
+		<gef:scriptText>'        .Height = objPanel.Height</gef:scriptText>
+		<gef:scriptText>'        .Width = objPanel.Width</gef:scriptText>
+		<gef:scriptText>'        .Select</gef:scriptText>
+		<gef:scriptText>'        BringToFront</gef:scriptText>
+		<gef:scriptText>'        .HighlightEnabled = False</gef:scriptText>
+		<gef:scriptText>'    End With</gef:scriptText>
+		<gef:scriptText>'End Sub</gef:scriptText>
+		<gef:scriptText>'</gef:scriptText>
+		<gef:scriptText>'Private Sub AlignMask()</gef:scriptText>
+		<gef:scriptText>'    AlignMaskHelper rctMaskUnSuspend, PanelBtnUnSuspend</gef:scriptText>
+		<gef:scriptText>'End Sub</gef:scriptText>
+		<gef:scriptText></gef:scriptText>
+	</gef:script>
+</svg>

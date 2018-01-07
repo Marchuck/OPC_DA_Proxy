@@ -12,6 +12,7 @@ namespace OPC_DA_Proxy
         protected void Application_Start()
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
+            
         }
     }
 }

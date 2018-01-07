@@ -12,12 +12,13 @@ namespace OPC_DA_Proxy
             OpcDaRunner.getInstance().Connect();
             // Web API routes
             config.MapHttpAttributeRoutes();
-            
+             
             config.Routes.MapHttpRoute(
                name: "DefaultApi",
                routeTemplate: "api/{controller}/{id}",
                defaults: new { id = RouteParameter.Optional }
            );
+            
             config.Formatters.Remove(config.Formatters.XmlFormatter);
             
         }

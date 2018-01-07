@@ -113,6 +113,42 @@ namespace OPC_DA_Proxy.OpcDaClient
         
         public static Dictionary<string, BrowseElement[]> repository { get; set; } = new Dictionary<string, BrowseElement[]>();
 
+        public static ItemValueResult[] ReadMultipleValues(ReadNodeValuesBulkRequest bulkRequest)
+        {
+            Item[] readPayload = new Item[bulkRequest.nodeNames.Count];
+
+            var i = 0;
+
+            foreach (string nodeName in bulkRequest.nodeNames)
+            {
+                Opc.ItemIdentifier itemId = new Opc.ItemIdentifier(nodeName);
+                readPayload[i] = new Item(itemId);
+                ++i;
+            }
+            return server.Read(readPayload);
+        }
+        public static Opc.IdentifiedResult[] WriteMultipleValues(WriteNodeValuesBulkRequest bulkRequest)
+        {
+            ItemValueResult[] writePayload = new ItemValueResult[bulkRequest.nodes.Count];
+
+            var i = 0;
+
+            foreach (WriteNodeValueRequest nodeRequest in bulkRequest.nodes)
+            {
+                string nodeName = nodeRequest.nodeName;
+                double value= nodeRequest.value;
+
+                Opc.ItemIdentifier itemId = new Opc.ItemIdentifier(nodeName);
+                ItemValueResult it = new ItemValueResult(itemId);
+                it.Value = value;
+                writePayload[i] = it;
+                ++i;
+            }
+
+            return server.Write(writePayload);
+        }
+        
+
         public static string WriteValue(string nodeName, double value)
         {
 
@@ -122,9 +158,10 @@ namespace OPC_DA_Proxy.OpcDaClient
 
             server.Write(new ItemValueResult[] { it });
 
-            return "Masz ty RiGCz? wpisałeś  " + value + " do węzła " + nodeName;
-
+            return "You typed  " + value + " into node " + nodeName;
         }
+
+
         public static ItemValueResult[] ReadValue(string nodeName)
         {
 
